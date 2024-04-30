@@ -1,0 +1,38 @@
+<div>
+    <h1>Lista de productos</h1>
+    <div class="tittle">
+        <ul>
+            <li>Title</li>
+            <li>ID</li>
+            <li>DESCRIPTION</li>
+            <li>PRICE</li>
+            <li>THUMBNAIL</li>
+            <li>CODE</li>
+            <li>STOCK</li>
+            <li>STATUS</li>
+            <li>CATEGORY</li>
+        </ul>
+    </div>
+    {{#each productos}}
+    <div class="items">
+        <ul class="item-list">
+            <li class="item">{{this.title}}</li>
+            <li class="item">{{this.id}}</li>
+            <li class="item">{{this.description}}</li>
+            <li class="item">{{this.price}}</li>
+            <li class="item">{{this.thumbnail}}</li>
+            <li class="item">{{this.code}}</li>
+            <li class="item">{{this.stock}}</li>
+            <li class="item">
+                {{#if this.status}}
+                    Activo
+                {{else}}
+                    Desactivo
+                {{/if}}
+            </li>
+            <li class="item">{{this.category}}</li>
+        </ul>
+    </div>
+    {{/each}}
+</div>
+

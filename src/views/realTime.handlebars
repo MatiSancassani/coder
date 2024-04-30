@@ -1,0 +1,47 @@
+<div>
+    <h1>Real Time Products</h1>
+</div>
+<div>   
+    <div class="tittle">
+        <ul>
+            <li>Title</li>
+            <li>ID</li>
+            <li>DESCRIPTION</li>
+            <li>PRICE</li>
+            <li>THUMBNAIL</li>
+            <li>CODE</li>
+            <li>STOCK</li>
+            <li>STATUS</li>
+            <li>CATEGORY</li>
+        </ul>
+    </div>
+    
+    <div id="productos-dom">        
+        {{!-- Desde JS --}}
+    </div>
+    <h3>Agregar Productos</h3>
+    <div class="contenedor-flex">
+        <form id="producto-form" class="elementos-flex">
+            <label for="title">Titulo</label>
+            <input type="text" name="title" id="title" required>
+
+            <label for="description">Description</label>
+            <input type="text" name="description" id="description" required>
+
+            <label for="price">Price</label>
+            <input type="number" name="price" id="price" required>
+
+            <label for="code">Code</label>
+            <input type="text" name="code" id="code" required>
+
+            <label for="stock">Stock</label>
+            <input type="number" name="stock" id="stock" required>
+
+            <label for="category">Category</label>
+            <input type="text" name="category" id="category" required>
+
+            <button type="submit">Agregar Producto</button>
+        </form>
+    </div>
+</div>
+

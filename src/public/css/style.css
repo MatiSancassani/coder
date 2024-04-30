@@ -1,0 +1,89 @@
+h1 {
+    background: #758173;
+    color: #000000;
+    text-align: center;
+    padding: 1rem;
+}
+body {
+    background: #020402;
+}
+.tittle {
+    background: #000000;
+    color: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+.tittle ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+}
+
+
+.items {
+    
+    padding: 1rem;
+}
+.item-list {    
+    background: #758173;
+    border-radius: 2rem;
+    padding: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.item {
+    width: 2rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Estilos form */
+h3 {
+    text-align: center;
+    color: white;
+}
+.contenedor-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form {
+    background: white;
+    max-width: 400px;
+    margin: 20px;
+    padding: 20px;
+    border:  1px solid #ddd;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width:  100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+}
+button {
+    background: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #45a049;
+}

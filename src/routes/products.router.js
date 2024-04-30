@@ -1,12 +1,13 @@
 import { Router } from "express";
 import { productManager } from "../index.js";
-import { uploader } from "../utils/uploader.js";
+// import { uploader } from "../utils/uploader.js";
 
 const productsRouter = Router();
 
-productsRouter.post('/',uploader.single('thumbnail'), async(req, res) => {
-    res.status(200).send({ origin: 'server1', payload: req.body });
-})
+// productsRouter.post('/',uploader.single('thumbnail'), async(req, res) => {
+//     res.status(200).send({ origin: 'server1', payload: req.body });
+// })
+ 
 productsRouter.get('/', async(req, res) => {
     try {
         const {limit} = req.query;
