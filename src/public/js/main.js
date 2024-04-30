@@ -1,8 +1,8 @@
 const socket = io();
-const productosHtml = document.getElementById("productos-dom");
+
 
 socket.on('productos', (productos) => {  
-
+    const productosHtml = document.getElementById("productos-dom");
     function cargarProductos() {
         productosHtml.innerHTML = '';
         productos.forEach( produc => {

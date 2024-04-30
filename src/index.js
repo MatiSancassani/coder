@@ -37,15 +37,16 @@ const httpServer = app.listen(config.PORT, (req, res) => {
 const socketServer = new Server(httpServer);
 
 socketServer.on('connection',   async socket => {
+
+    
     console.log('Cliente conectado');
     const productos = await productManager.getProduct();
     socket.emit('productos',productos )
 
-    socket.on('addproduct',  producto => {
-        const response = productManager.addProduct(producto);
+    socket.on('addproduct', async  producto => {
+        const response = await productManager.addProduct(producto);
         if(response.producto)
         socket.emit('productos', response.producto )
-        
         
     });
 });
