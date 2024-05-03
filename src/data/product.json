@@ -1,1 +1,12 @@
-[{"id":"fc65f51a-e8ce-45bd-a57c-e9fa19f326b4","title":"Teclado","description":"Teclado","price":"$15000","thumbnail":"image","code":"P01","stock":"10","status":true,"category":"informatica"},{"id":"cc274957-a79a-4ef4-bf44-5b0c1d3951df","title":"1","description":"1","price":"1","code":"1","stock":"1","status":true,"category":"1"},{"id":"ee9b5a08-afa7-4aa0-9e84-851d4b8a7981","title":"1","description":"11","price":"1","code":"1","stock":"1","status":true,"category":"1"}]
+[
+    {
+        "id": "182054ae-19d4-4d1c-a153-fb788b9adbef",
+        "title": "2",
+        "description": "2",
+        "price": "2",
+        "code": "2",
+        "stock": "2",
+        "status": true,
+        "category": "2"
+    }
+]
