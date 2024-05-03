@@ -44,7 +44,9 @@ body {
     justify-content: center;
     flex-wrap: wrap;
 }
-
+.delete {
+    background: rgb(190, 94, 94);
+}
 /* Estilos form */
 h3 {
     text-align: center;

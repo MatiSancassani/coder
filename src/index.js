@@ -35,6 +35,8 @@ const httpServer = app.listen(config.PORT, (req, res) => {
     console.log(`Servidor escuchando en el puerto ${config.PORT}`);
 })
 const socketServer = new Server(httpServer);
+app.set('ssocketServer', socketServer);
+
 
 socketServer.on('connection',   async socket => {
 
@@ -48,5 +50,10 @@ socketServer.on('connection',   async socket => {
         if(response.producto)
         socket.emit('productos', response.producto )
         
+    });
+    socket.on('deleteProduct', async producto => {
+        const response = await productManager.deleteProduct(producto);
+        if(response)
+        socket.emit('productos', response.producto)
     });
 });

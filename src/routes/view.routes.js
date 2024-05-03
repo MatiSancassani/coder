@@ -21,7 +21,7 @@ router.get('/', async (req, res) => {
 router.get('/realtime', async (req, res) => {
     const p =  new ProductManager();
     const productos = await p.getProduct();
-    res.render('realTime');
+    res.render('realTime', productos);
 });
 
 // router.get('/users', (req, res) => {
