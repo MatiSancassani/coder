@@ -1,10 +1,15 @@
 const socket = io();
 let botonDelete = document.querySelectorAll(".delete");
-
+const carritoVacio = document.querySelector("#carrito-vacio");
+const productosDom = document.querySelector("#productos-dom");
 socket.on('productos', (productos) => {  
     const productosHtml = document.getElementById("productos-dom");
     function cargarProductos() {
+        if(productos.length > 0) {
+        carritoVacio.classList.add("carrito-vacio");
+        productosDom.classList.remove("carrito-vacio");
         productosHtml.innerHTML = '';
+        
         productos.forEach( produc => {
             const div = document.createElement("div");
             div.classList.add("items");
@@ -22,10 +27,16 @@ socket.on('productos', (productos) => {
                 <button class="delete" id="${produc.id}" type="submit">X</button>
             </ul>
             `;
+
             productosHtml.append(div);
         })
-        actualizarDelete();
-    }  
+        } else {
+            carritoVacio.classList.remove("carrito-vacio");
+            productosDom.classList.add("carrito-vacio");
+        }
+
+        actualizarDelete(); 
+    } 
     
     cargarProductos();
 
